@@ -31,7 +31,4 @@ else if (number > 1) {
 else {
     console.log("The number is not a prime number.");
 }
-Run Code
-Output
 
-Enter a positive number: 23
