@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const { isPrimeNumber } = require('./prime.test.js'); // Import your program's function
+const { isPrimeNumber } = require('./prime.js'); // Import your program's function
 
 describe('isPrimeNumber', function () {
     it('should return true for prime numbers', function () {
