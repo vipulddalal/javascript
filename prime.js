@@ -1,30 +1,18 @@
-// program to check if a number is prime or not
+// primeChecker.js
 
-// take input from the user
-const number = parseInt(prompt("Enter a positive number: "));
-let isPrime = true;
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
 
-// check if number is equal to 1
-
-// check if number is greater than 1
-else if (number > 1) {
-
-    // looping through 2 to number-1
-    for (let i = 2; i < number; i++) {
-        if (number % i == 0) {
-            isPrime = false;
-            break;
-        }
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
     }
+  }
 
-    if (isPrime) {
-        console.log(`${number} is a prime number`);
-    } else {
-        console.log(`${number} is a not prime number`);
-    }
+  return true;
 }
 
-// check if number is less than 1
-
-}
-
+// Export the isPrime function as a module
+module.exports = isPrime;
